@@ -214,9 +214,9 @@ install_app() {
   fi
   #
   write_platform_env
-  while ! nc -z 172.31.0.0 3306 ; do
-    sleep 1;
-  done
+  #while ! nc -z 172.31.0.0 3306 ; do
+  #  sleep 1;
+  #done
 
   ( cd ${PLATFORM_API_HOME} ;
     # Run migrations
