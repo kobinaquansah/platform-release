@@ -10,7 +10,7 @@ services:
       - ./tls-certs:/etc/nginx/certs
       - ./dist/nginx-proxy.conf:/etc/nginx/conf.d/proxy.conf
     environment:
-      DEFAULT_HOST: 127.0.0.1.xip.io
+      DEFAULT_HOST: 0.0.0.0.xip.io
   ushahidi:
     build: .
     command: run
@@ -22,7 +22,7 @@ services:
     ports:
       - "80"
     environment:
-      VIRTUAL_HOST: 127.0.0.1.xip.io
+      VIRTUAL_HOST: 0.0.0.0.xip.io
       MYSQL_HOST: mysql
       MYSQL_DATABASE: ushahidi
       MYSQL_USER: ushahidi
@@ -31,7 +31,7 @@ services:
       REDIS_PORT: "6379"
       CACHE_DRIVER: redis
       # Setting this variable is required for the mobile app to work:
-      # SITE_URL: http://127.0.0.1.xip.io
+      # SITE_URL: http://0.0.0.0.xip.io
   mysql:
     image: mysql:5.7
     environment:

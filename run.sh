@@ -264,7 +264,7 @@ gen_fpm_www_pool_config() {
 [www]
 user = www-data
 group = www-data
-listen = 127.0.0.1:9000
+listen = 0.0.0.0:9000
 pm = dynamic
 pm.max_children = 5
 pm.start_servers = 2
