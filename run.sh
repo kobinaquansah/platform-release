@@ -214,7 +214,7 @@ install_app() {
   fi
   #
   write_platform_env
-  while ! nc -z $MYSQL_HOST 3306 ; do
+  while ! nc -z 172.31.0.0 3306 ; do
     sleep 1;
   done
 
